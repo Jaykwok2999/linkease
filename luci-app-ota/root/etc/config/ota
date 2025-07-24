@@ -1,0 +1,3 @@
+
+config ota 'config'
+	option api_url 'https://github.com/Jaykwok2999/qihoo360t7-actions/blob/main/fw.json'
