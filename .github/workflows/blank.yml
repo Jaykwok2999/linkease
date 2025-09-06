@@ -45,8 +45,8 @@ jobs:
         cp -af ./patch/index.js linkease/luci/luci-app-quickstart/htdocs/luci-static/quickstart/
         sed -i 's/services/nas/g' linkease/luci/luci-app-linkease/luasrc/controller/linkease.lua
         sed -i 's/services/nas/g' linkease/luci/luci-app-linkease/luasrc/view/linkease_status.htm
-        sed -i 's/LUCI_DEPENDS:=+quickstart +luci-app-store/LUCI_DEPENDS:=+quickstartg' linkease/luci/luci-app-quickstart/Makefile
-        #cp -af ./patch/Makefile linkease/luci/luci-app-quickstart
+        rm -rf ./linkease/luci/luci-app-quickstart/Makefile
+        cp -af ./patch/Makefile linkease/luci/luci-app-quickstart
         git clone https://github.com/linkease/nas-packages ./linkease/nas-packages
         mv ./linkease/nas-packages/multimedia/ffmpeg-remux ./linkease/nas-packages/
         mv ./linkease/nas-packages/network/services/* ./linkease/nas-packages/
