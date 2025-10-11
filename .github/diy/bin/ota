@@ -6,8 +6,8 @@
 API=$(uci -q get ota.config.api_url)
 WRLOCK=/var/lock/ota_background.lock
 
-# mediatek-filogic
-[ $(uname -m) = "mediatek-filogic" ] && alias board_name="echo mediatek-filogic"
+# aarch64_cortex-a53
+[ $(uname -m) = "mediatek-filogic" ] && alias board_name="echo aarch64_cortex-a53"
 
 action=${1}
 shift
